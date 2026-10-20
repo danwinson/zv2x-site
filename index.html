@@ -25,11 +25,11 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;heigh
 nav a{margin-left:28px;text-decoration:none;font-weight:500;color:var(--muted)}
 nav a:hover{color:var(--green)}
 .hero{background:var(--green);color:#fff;position:relative;overflow:hidden}
-.hero .wrap{padding:96px 24px 104px;position:relative;z-index:1}
+.hero:before{content:"";position:absolute;top:0;right:0;bottom:0;width:60%;background:url(img/hero.jpg) 58% 64%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
+.hero .wrap{padding:120px 24px 128px;position:relative;z-index:1}
 .hero h1{font-family:Montserrat;font-weight:800;font-weight:700;font-size:clamp(36px,5.4vw,64px);line-height:1.04;margin:0 0 22px;max-width:780px;letter-spacing:.5px}
 .hero h1 span{color:var(--orange)}
 .hero p{font-size:21px;max-width:600px;color:#d9dbde;margin:0}
-.chev{position:absolute;right:-40px;top:50%;transform:translateY(-50%);width:380px;opacity:.85}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
 .stat{padding:30px 24px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:0}
@@ -40,7 +40,9 @@ section.soft{background:var(--soft)}
 h2{font-family:Montserrat;font-weight:800;font-size:38px;line-height:1.05;margin:0 0 18px;color:var(--green)}
 .lede{max-width:680px;color:var(--muted);margin:0 0 40px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:0 0 26px;overflow:hidden}
+.card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;margin:0 0 20px}
+.card .n,.card h3,.card p{padding:0 26px}
 .card h3{font-family:Montserrat;font-weight:800;font-size:26px;margin:0 0 8px;color:var(--green)}
 .card p{margin:0;color:var(--muted);font-size:17px}
 .card .n{font-family:Montserrat;font-weight:800;font-weight:700;color:var(--orange-t);font-size:18px;letter-spacing:1px}
@@ -62,8 +64,8 @@ footer p{margin:0;max-width:640px}
 footer a{color:#fff}
 @media (max-width:860px){
   nav{display:none}
-  .chev{display:none}
-  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero:before{width:100%;opacity:.2;-webkit-mask-image:none;mask-image:none}
+    .stats{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
   .grid,.split{grid-template-columns:1fr}
@@ -85,7 +87,6 @@ footer a{color:#fff}
 
 <main id="top">
 <div class="hero">
-  <svg class="chev" viewBox="0 0 200 140" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g transform="skewX(-14)" fill="#D2232A"><rect x="60" y="10" width="150" height="26" rx="4"/><rect x="90" y="55" width="120" height="26" rx="4"/><rect x="120" y="100" width="90" height="26" rx="4"/></g></svg>
   <div class="wrap">
     <h1>Freight across Victoria, <span>delivered safely.</span></h1>
     <p>General freight, crane truck and tipper deliveries, and same-day vans from four depots across Melbourne, Geelong and the Central Highlands.</p>
@@ -103,9 +104,9 @@ footer a{color:#fff}
   <h2>The right vehicle for the load</h2>
   <p class="lede">Sixty trucks, thirty vans and twenty account managers on the road, so we can move a pallet across town or a semi-load to the regions.</p>
   <div class="grid">
-    <div class="card"><div class="n">01</div><h3>Linehaul</h3><p>Prime movers running Melbourne to Geelong and Ballarat, overnight and on regular schedules.</p></div>
-    <div class="card"><div class="n">02</div><h3>Crane trucks and tippers</h3><p>Building materials lifted onto site or tipped where you need them, with operators who hold the right licences.</p></div>
-    <div class="card"><div class="n">03</div><h3>Same-day vans</h3><p>Express parcels and small loads between our depots and your door.</p></div>
+    <div class="card"><img src="img/linehaul.jpg" style="object-position:35% 72%" alt="Red prime mover with a box trailer on a highway" loading="lazy" width="1800" height="1200"><div class="n">01</div><h3>Linehaul</h3><p>Prime movers running Melbourne to Geelong and Ballarat, overnight and on regular schedules.</p></div>
+    <div class="card"><img src="img/tipper.jpg" alt="Red tipper truck on a divided highway" loading="lazy" width="1800" height="1200"><div class="n">02</div><h3>Crane trucks and tippers</h3><p>Building materials lifted onto site or tipped where you need them, with operators who hold the right licences.</p></div>
+    <div class="card"><img src="img/vans.jpg" alt="Driver unloading parcels from a white van" loading="lazy" width="1800" height="1200"><div class="n">03</div><h3>Same-day vans</h3><p>Express parcels and small loads between our depots and your door.</p></div>
   </div>
 </div></section>
 
@@ -144,7 +145,7 @@ footer a{color:#fff}
 </main>
 
 <footer><div class="wrap">
-  <p>ZV2X Logistics is a fictional company. The people, depots and figures on this site are made up. Prepared by <a href="https://www.zetifi.com">Zetifi</a>.</p>
+  <p>ZV2X Logistics is a fictional company. The people, depots and figures on this site are made up. Stock photos from Pexels. Prepared by <a href="https://www.zetifi.com">Zetifi</a>.</p>
   <p>&copy; 2026 Zetifi</p>
 </div></footer>
 </body>
