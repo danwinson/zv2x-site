@@ -4,85 +4,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZV2X Logistics</title>
-<meta name="description" content="ZV2X Logistics is a fictional Victorian freight company, created by Zetifi as a worked example of a Connected Fleet Safety Plan.">
+<meta name="description" content="ZV2X Logistics is a fictional Victorian freight company, a worked example of Zetifi Marshal working with Geotab telematics.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800;1,900&display=swap" rel="stylesheet">
-<style>
-:root{--green:#1F2328;--green-d:#15181c;--orange:#D2232A;--ink:#1d2321;--muted:#5b6661;--line:#dfe4e1;--bg:#ffffff;--soft:#f4f4f5;--orange-t:#B81E24}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.55;color:var(--ink);background:var(--bg)}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.notice{background:var(--orange-t);color:#fff;font-size:14px;text-align:center;padding:7px 16px}
-header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand svg{height:44px;width:auto}
-nav a{margin-left:28px;text-decoration:none;font-weight:500;color:var(--muted)}
-nav a:hover{color:var(--green)}
-.hero{background:var(--green);color:#fff;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;top:0;right:0;bottom:0;width:60%;background:url(img/hero.jpg) 58% 64%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
-.hero .wrap{padding:120px 24px 128px;position:relative;z-index:1}
-.hero h1{font-family:Montserrat;font-weight:800;font-weight:700;font-size:clamp(36px,5.4vw,64px);line-height:1.12;margin:0 0 22px;max-width:780px;letter-spacing:.5px}
-.hero h1 span{color:var(--orange)}
-.hero p{font-size:21px;max-width:600px;color:#d9dbde;margin:0}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
-.stat{padding:30px 24px;border-right:1px solid var(--line)}
-.stat:last-child{border-right:0}
-.stat b{display:block;font-family:Montserrat;font-weight:800;font-size:46px;line-height:1;color:var(--green)}
-.stat span{color:var(--muted);font-size:16px}
-section{padding:84px 0}
-section.soft{background:var(--soft)}
-h2{font-family:Montserrat;font-weight:800;font-size:38px;line-height:1.15;margin:0 0 18px;color:var(--green)}
-.lede{max-width:680px;color:var(--muted);margin:0 0 40px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:0 0 26px;overflow:hidden}
-.card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;margin:0 0 20px}
-.card .n,.card h3,.card p{padding:0 26px}
-.card h3{font-family:Montserrat;font-weight:800;font-size:26px;margin:0 0 8px;color:var(--green)}
-.card p{margin:0;color:var(--muted);font-size:17px}
-.card .n{font-family:Montserrat;font-weight:800;font-weight:700;color:var(--orange-t);font-size:18px;letter-spacing:1px}
-.split{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
-.checks{list-style:none;padding:0;margin:0}
-.checks li{padding:14px 0 14px 34px;border-bottom:1px solid var(--line);position:relative}
-.checks li:before{content:"";position:absolute;left:0;top:22px;width:18px;height:6px;background:var(--orange);transform:skewX(-14deg);border-radius:2px}
-.checks b{color:var(--green)}
-.quote{background:var(--green);color:#fff;border-radius:6px;padding:36px}
-.quote p{font-size:22px;line-height:1.45;margin:0 0 18px}
-.quote cite{font-style:normal;color:#c3c6cb;font-size:16px}
-.depots{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
-.depot{border-top:1px solid var(--line);padding-top:16px}
-.depot h3{font-family:Montserrat;font-weight:800;font-size:26px;margin:0 0 4px;color:var(--green)}
-.depot p{margin:0;color:var(--muted);font-size:16px}
-footer{background:var(--green-d);color:#c3c6cb;font-size:15px;padding:44px 0}
-footer .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
-footer p{margin:0;max-width:640px}
-footer a{color:#fff}
-@media (max-width:860px){
-  nav{display:none}
-  .hero:before{width:100%;opacity:.2;-webkit-mask-image:none;mask-image:none}
-    .stats{grid-template-columns:repeat(2,1fr)}
-  .stat:nth-child(2){border-right:0}
-  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .grid,.split{grid-template-columns:1fr}
-  .depots{grid-template-columns:repeat(2,1fr)}
-  section{padding:60px 0}
-  .wrap{padding:0 16px}
-  .hero .wrap{padding:64px 16px 72px}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="notice">ZV2X Logistics is a fictional company. This site is a worked example prepared by Zetifi.</div>
+<div class="notice">Worked example: ZV2X Logistics is a fictional company showing <b>Zetifi Marshal</b> working with <b>Geotab</b> telematics. <a href="case-study.html">See how it's built</a> &middot; <a href="https://www.zetifi.com/">zetifi.com</a></div>
 <header><div class="wrap">
-  <a class="brand" href="#top" aria-label="ZV2X Logistics home">
+  <a class="brand" href="index.html" aria-label="ZV2X Logistics home">
     <svg viewBox="60 85 840 185" role="img" aria-hidden="true"><g transform="skewX(-14)"><rect x="70" y="92" width="150" height="26" rx="4" fill="#D2232A"/><rect x="100" y="137" width="120" height="26" rx="4" fill="#D2232A"/><rect x="130" y="182" width="90" height="26" rx="4" fill="#D2232A"/></g><text x="225" y="208" style="font-family:Montserrat;font-weight:900;font-style:italic;font-size:150px;letter-spacing:-2px" fill="#D2232A">ZV2X</text><text x="232" y="258" style="font-family:Montserrat;font-weight:600;font-size:34px;letter-spacing:19px" fill="#1F2328">LOGISTICS</text></svg>
   </a>
-  <nav><a href="#services">Services</a><a href="#safety">Safety</a><a href="#depots">Depots</a><a href="#about">About</a></nav>
+  <nav><a href="index.html#services">Services</a><a href="safety.html">Safety &amp; ESG</a><a href="index.html#depots">Depots</a><a href="case-study.html">Customer story</a></nav>
 </div></header>
 
 <main id="top">
@@ -96,7 +32,7 @@ footer a{color:#fff}
 <div class="wrap stats">
   <div class="stat"><b>110</b><span>vehicles on the road</span></div>
   <div class="stat"><b>4</b><span>depots</span></div>
-  <div class="stat"><b>4M</b><span>kilometres a year</span></div>
+  <div class="stat"><b>3.5M</b><span>kilometres a year</span></div>
   <div class="stat"><b>100%</b><span>of vehicles with trackers and cameras</span></div>
 </div>
 
@@ -115,11 +51,12 @@ footer a{color:#fff}
     <h2>Every vehicle connected, every week reviewed</h2>
     <p class="lede" style="margin-bottom:24px">Driving is the riskiest thing our people do at work. Our Driving for Work Policy is backed by a Connected Fleet Safety Plan, so each rule is checked on the road rather than on paper.</p>
     <ul class="checks">
-      <li><b>Trackers and cameras</b> in every truck, van and car, with in-cab warnings for speed, phone use and tiredness.</li>
-      <li><b>Driver keys</b>, so every trip is recorded against the person driving.</li>
+      <li><b>Geotab trackers and cameras</b> in every truck, van and car, with in-cab warnings for speed, phone use and tiredness.</li>
+      <li><b>Zetifi Marshal</b> for anyone working alone, with check-ins and an emergency button on their phone.</li>
+      <li><b>Every event in our own Microsoft 365</b>, where our safety team already works.</li>
       <li><b>A weekly safety summary</b> for our Fleet and WHS Manager and each depot manager, with video of what happened.</li>
-      <li><b>Yard speed limits</b> at every depot, with a beep when a vehicle goes over 20 km/h.</li>
     </ul>
+    <a class="more" href="safety.html">How we run safety and sustainability &rarr;</a>
   </div>
   <div class="quote">
     <p>"We used to find out about a near miss weeks later, if at all. Now the depot managers sit down with the driver and the clip in the same week. It's a conversation, not a lecture."</p>
@@ -138,14 +75,15 @@ footer a{color:#fff}
   </div>
 </div></section>
 
-<section id="about" class="soft"><div class="wrap">
-  <h2>A worked example</h2>
-  <p class="lede" style="margin-bottom:0">ZV2X Logistics does not exist. Zetifi built it to show what a Connected Fleet Safety Plan looks like in a real-sized mixed fleet: a driving policy, the addendum that links each rule to the system, and the weekly summary that comes out of it. The numbers have the shape of real fleets but describe no real vehicle, driver or business.</p>
+<section class="soft"><div class="wrap">
+  <h2>Behind this site</h2>
+  <p class="lede" style="margin-bottom:0">ZV2X Logistics does not exist. Zetifi built it to show Zetifi Marshal and Geotab working together in a real-sized mixed fleet: a driving policy, the plan that links each rule to the system, the weekly summary that comes out of it, and the people who work alone in between.</p>
+  <a class="more" href="case-study.html">Read the customer story &rarr;</a>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <p>ZV2X Logistics is a fictional company. The people, depots and figures on this site are made up. Stock photos from Pexels. Prepared by <a href="https://www.zetifi.com">Zetifi</a>.</p>
+  <p>ZV2X Logistics is a fictional company. The people, depots and figures on this site are made up; the numbers are modelled on the shape of real fleets. Stock photos from Pexels. Built by <a href="https://www.zetifi.com/">Zetifi</a> to show <a href="https://www.zetifi.com/solutions/connected-worker-safety">Zetifi Marshal</a> and <a href="https://www.zetifi.com/solutions/connected-fleet-safety">Connected Fleet Safety</a> with Geotab. <a href="https://www.zetifi.com/contact-us">Talk to Zetifi</a>.</p>
   <p>&copy; 2026 Zetifi</p>
 </div></footer>
 </body>
