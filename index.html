@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZV2X Logistics</title>
+<meta name="description" content="ZV2X Logistics is a fictional Victorian freight company, created by Zetifi as a worked example of a Connected Fleet Safety Plan.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green:#1E4636;--green-d:#14321f;--orange:#C9732A;--ink:#1d2321;--muted:#5b6661;--line:#dfe4e1;--bg:#ffffff;--soft:#f3f5f3;--orange-t:#9E5519}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Barlow,system-ui,sans-serif;font-size:18px;line-height:1.55;color:var(--ink);background:var(--bg)}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.notice{background:var(--orange-t);color:#fff;font-size:14px;text-align:center;padding:7px 16px}
+header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{height:34px;width:34px}
+.brand b{font-family:'Barlow Condensed';font-weight:700;font-size:30px;letter-spacing:2px;color:var(--green);line-height:1}
+.brand small{display:block;font-weight:600;font-size:11px;letter-spacing:4px;color:var(--orange-t)}
+nav a{margin-left:28px;text-decoration:none;font-weight:500;color:var(--muted)}
+nav a:hover{color:var(--green)}
+.hero{background:var(--green);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{padding:96px 24px 104px;position:relative;z-index:1}
+.hero h1{font-family:'Barlow Condensed';font-weight:700;font-size:clamp(44px,7vw,84px);line-height:.98;margin:0 0 22px;max-width:780px;letter-spacing:.5px}
+.hero h1 span{color:var(--orange)}
+.hero p{font-size:21px;max-width:600px;color:#d5e0da;margin:0}
+.chev{position:absolute;right:-60px;top:0;bottom:0;width:520px;opacity:.13}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-bottom:1px solid var(--line)}
+.stat{padding:30px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:'Barlow Condensed';font-size:46px;line-height:1;color:var(--green)}
+.stat span{color:var(--muted);font-size:16px}
+section{padding:84px 0}
+section.soft{background:var(--soft)}
+h2{font-family:'Barlow Condensed';font-weight:700;font-size:44px;line-height:1.05;margin:0 0 18px;color:var(--green)}
+.lede{max-width:680px;color:var(--muted);margin:0 0 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:6px;padding:28px}
+.card h3{font-family:'Barlow Condensed';font-size:26px;margin:0 0 8px;color:var(--green)}
+.card p{margin:0;color:var(--muted);font-size:17px}
+.card .n{font-family:'Barlow Condensed';font-weight:700;color:var(--orange-t);font-size:18px;letter-spacing:1px}
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:start}
+.checks{list-style:none;padding:0;margin:0}
+.checks li{padding:14px 0 14px 34px;border-bottom:1px solid var(--line);position:relative}
+.checks li:before{content:"";position:absolute;left:0;top:21px;width:14px;height:14px;background:var(--orange);clip-path:polygon(0 0,45% 0,100% 50%,45% 100%,0 100%,55% 50%)}
+.checks b{color:var(--green)}
+.quote{background:var(--green);color:#fff;border-radius:6px;padding:36px}
+.quote p{font-size:22px;line-height:1.45;margin:0 0 18px}
+.quote cite{font-style:normal;color:#c7d6ce;font-size:16px}
+.depots{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.depot{border-top:1px solid var(--line);padding-top:16px}
+.depot h3{font-family:'Barlow Condensed';font-size:26px;margin:0 0 4px;color:var(--green)}
+.depot p{margin:0;color:var(--muted);font-size:16px}
+footer{background:var(--green-d);color:#c7d6ce;font-size:15px;padding:44px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer p{margin:0;max-width:640px}
+footer a{color:#fff}
+@media (max-width:860px){
+  nav{display:none}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid,.split{grid-template-columns:1fr}
+  .depots{grid-template-columns:repeat(2,1fr)}
+  section{padding:60px 0}
+  .wrap{padding:0 16px}
+  .hero .wrap{padding:64px 16px 72px}
+}
+</style>
+</head>
+<body>
+<div class="notice">ZV2X Logistics is a fictional company. This site is a worked example prepared by Zetifi.</div>
+<header><div class="wrap">
+  <a class="brand" href="#top" aria-label="ZV2X Logistics home">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><polygon points="6,8 26,8 46,32 26,56 6,56 26,32" fill="#1E4636"/><polygon points="30,8 42,8 62,32 42,56 30,56 50,32" fill="#C9732A"/></svg>
+    <span><b>ZV2X</b><small>LOGISTICS</small></span>
+  </a>
+  <nav><a href="#services">Services</a><a href="#safety">Safety</a><a href="#depots">Depots</a><a href="#about">About</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero">
+  <svg class="chev" viewBox="0 0 64 64" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><polygon points="6,8 26,8 46,32 26,56 6,56 26,32" fill="#fff"/><polygon points="30,8 42,8 62,32 42,56 30,56 50,32" fill="#C9732A"/></svg>
+  <div class="wrap">
+    <h1>Freight across Victoria, <span>delivered safely.</span></h1>
+    <p>General freight, crane truck and tipper deliveries, and same-day vans from four depots across Melbourne, Geelong and the Central Highlands.</p>
+  </div>
+</div>
+
+<div class="wrap stats">
+  <div class="stat"><b>110</b><span>vehicles on the road</span></div>
+  <div class="stat"><b>4</b><span>depots</span></div>
+  <div class="stat"><b>4M</b><span>kilometres a year</span></div>
+  <div class="stat"><b>100%</b><span>of vehicles with trackers and cameras</span></div>
+</div>
+
+<section id="services"><div class="wrap">
+  <h2>The right vehicle for the load</h2>
+  <p class="lede">Sixty trucks, thirty vans and twenty account managers on the road, so we can move a pallet across town or a semi-load to the regions.</p>
+  <div class="grid">
+    <div class="card"><div class="n">01</div><h3>Linehaul</h3><p>Prime movers running Melbourne to Geelong and Ballarat, overnight and on regular schedules.</p></div>
+    <div class="card"><div class="n">02</div><h3>Crane trucks and tippers</h3><p>Building materials lifted onto site or tipped where you need them, with operators who hold the right licences.</p></div>
+    <div class="card"><div class="n">03</div><h3>Same-day vans</h3><p>Express parcels and small loads between our depots and your door.</p></div>
+  </div>
+</div></section>
+
+<section id="safety" class="soft"><div class="wrap split">
+  <div>
+    <h2>Every vehicle connected, every week reviewed</h2>
+    <p class="lede" style="margin-bottom:24px">Driving is the riskiest thing our people do at work. Our Driving for Work Policy is backed by a Connected Fleet Safety Plan, so each rule is checked on the road rather than on paper.</p>
+    <ul class="checks">
+      <li><b>Trackers and cameras</b> in every truck, van and car, with in-cab warnings for speed, phone use and tiredness.</li>
+      <li><b>Driver keys</b>, so every trip is recorded against the person driving.</li>
+      <li><b>A weekly safety summary</b> for our Fleet and WHS Manager and each depot manager, with video of what happened.</li>
+      <li><b>Yard speed limits</b> at every depot, with a beep when a vehicle goes over 20 km/h.</li>
+    </ul>
+  </div>
+  <div class="quote">
+    <p>"We used to find out about a near miss weeks later, if at all. Now the depot managers sit down with the driver and the clip in the same week. It's a conversation, not a lecture."</p>
+    <cite>Sarah Ellison, Fleet and WHS Manager (fictional)</cite>
+  </div>
+</div></section>
+
+<section id="depots"><div class="wrap">
+  <h2>Four depots, one fleet</h2>
+  <p class="lede">Each depot has a marked 10 km/h yard, a visitor car park, and a manager who reviews the week with their drivers.</p>
+  <div class="depots">
+    <div class="depot"><h3>Laverton North</h3><p>Head office and linehaul</p></div>
+    <div class="depot"><h3>Dandenong South</h3><p>South-east metro</p></div>
+    <div class="depot"><h3>Corio</h3><p>Geelong and the Surf Coast</p></div>
+    <div class="depot"><h3>Wendouree</h3><p>Ballarat and the Central Highlands</p></div>
+  </div>
+</div></section>
+
+<section id="about" class="soft"><div class="wrap">
+  <h2>A worked example</h2>
+  <p class="lede" style="margin-bottom:0">ZV2X Logistics does not exist. Zetifi built it to show what a Connected Fleet Safety Plan looks like in a real-sized mixed fleet: a driving policy, the addendum that links each rule to the system, and the weekly summary that comes out of it. The numbers have the shape of real fleets but describe no real vehicle, driver or business.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>ZV2X Logistics is a fictional company. The people, depots and figures on this site are made up. Prepared by <a href="https://www.zetifi.com">Zetifi</a>.</p>
+  <p>&copy; 2026 Zetifi</p>
+</div></footer>
+</body>
+</html>
